@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선택된 물품 계산하기</title>
+<script>
+var sum=0;
+function calc(cBox) {
+	if(cBox.checked)
+		sum += parseInt(cBox.value);
+	else
+		sum += parseInt(cBox.value);
+	document.getElementById("sumtext").value = cBox.value;
+}
+function sum(){
+   document.getElementById("sumtext").value = sum;
+}
+</script>
+</head>
+<body>
+<h3>물품을 선택하면 금액이 자동 계산됩니다</h3>
+<hr>
+<div>
+	<button style="background-color:bisque;" name="hap" value="1"
+		onclick="calc(this)">1
+	<button  style="background-color:bisque;" name="shose" value="2"
+		onclick="calc(this)">2
+	<button  style="background-color:bisque;" name="bag" value="3"
+      onclick="calc(this)">3
+   <br/></div>
+   <div><button style="background-color:bisque;" name="hap" value="4"
+      onclick="calc(this)">4
+   <button  style="background-color:bisque;" name="shose" value="5"
+      onclick="calc(this)">5
+   <button  style="background-color:bisque;" name="bag" value="6"
+      onclick="calc(this)">6</div>
+   <div><button style="background-color:bisque;" name="hap" value="7"
+      onclick="calc(this)">7
+   <button  style="background-color:bisque;" name="shose" value="8"
+      onclick="calc(this)">8
+   <button  style="background-color:bisque;" name="bag" value="9"
+      onclick="calc(this)">9</div>
+   
+
+   </div>
+   <div> <button name="bag" value="9"
+      onclick="sum()">합계</div></div>
+  
+
+      <div>
+         지불하실 금액 <input type="text" id="sumtext" value="0" >
+      </div>
+</body>
+</html>

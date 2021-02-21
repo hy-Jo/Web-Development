@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>setInterval()</title></head>
+<body>
+<h3>setInterval()</h3>
+<hr>
+<div><span id="datetime" > </span></div>
+<hr>
+<script>
+var span = document.getElementById("span");
+var timerID = setInterval("time()", 200); // 200밀리초 주기로 doRotate() 호출
+
+datetime.onclick = function (e) { // 마우스 클릭 이벤트 리스너
+	clearInterval(timerID); // 타이머 해제. 문자열 회전 중단
+}
+
+function time() {
+	var dt = new Date();
+   document.getElementById("datetime").innerHTML = "Current Time: " + dt.toLocaleTimeString();
+	//span.innerHTML = str; // str 텍스트를 span 객체에 출력
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Example 1</title>
+</head>
+<Script>
+    var img = document.getElementById("myImg");
+    img.src = "lightOff.GIF";
+    function changeOn(id){
+       // var background = document.getElementById(id).style.background;
+        background = "lightyellow"
+
+
+
+  
+        var img = document.getElementById("myImg");
+        img.src = "lightOn.gif";
+        //img.style = "background:grey";
+    }
+    function changeOff(id){
+        var img = document.getElementById("myImg");
+        img.src = "lightOff.gif";
+        img.style = "background:Yellow";
+    }
+</Script>
+<body>
+<h3>What Can javaScript Do ?</h3>
+<hr>
+<button id="b1" onclick="changeOn()">On</button>
+
+
+ 
+<img id="myImg" src="lightOff.GIF" style="background:grey">
+
+
+<button id="b2" onclick="changeOff()">Off</button> 
+
+</body>
+</html>

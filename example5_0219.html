@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>setTimeout()으로 웹 페이지 자동 연결</title>
+</head>
+<body>
+<h3>setTimeOut()</h3>
+<hr>
+생각하는 시간(5초) <button onclick="thinkingStart();">start</button >
+<hr>
+   <img id="img" src="lightON.GIF" style="visibility:hidden">
+<p id="noti"></p>
+
+<script>
+var timerID=null;
+function thinkingStart() {
+	// 타이머 시작
+   document.images[0].style.visibility ="visible";
+   setTimeout("myTimer", 5000);
+}
+function myTimer() {
+   document.images[0].style.visibility ="hidden";
+   document.getElementById("noti").innerHTML = "5초가 경과했습니다!";
+   
+   
+   
+}
+
+</script>
+</body>
+
+</html>

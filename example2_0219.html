@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+   <h3> 행운번호를 추천합니다. </h3><hr>   
+<script> 
+   function luckyNumber() { 
+      var num = new Array();   
+      var arr = "";
+      var rd;
+      document.write("<h3> 행운 번호</h3><hr>");
+      document.write(num);
+      for (i=1; i<=6; i++)  { 
+        rd = Math.floor(Math.random() * 45+1);
+        while(num.includes(rd)){
+           rd=Math.floor(Math.random() * 45+1);
+        };
+        if(!num.includes(rd)) num[i] =rd;
+        if(i<6) document.write(num[i]+ " ");
+      }
+
+      document.write("<br>보너스 : " + num[6]); 
+   } 
+</script>
+
+<button onclick="luckyNumber()">행운번호 생성</button>
+</body>
+</html>
